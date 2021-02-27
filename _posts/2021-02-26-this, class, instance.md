@@ -212,7 +212,7 @@ console.log(user) // User {name: "John", arr: Array(4)}
 User.prototype.foo = function(){console.log('foo')}// prototype으로 추가할 수 있지만, 
 user.foo() // 'foo'  
 
-console.log(User)//User를 다시 찍어보면 메소드는 출력되지 않습니다.
+console.log(User)//User를 다시 찍어보면 메소드는 출력되지 않습니다. -> User.prototype로 출력가능.
 //object에서 프로퍼티를 읽으려고 하는데 해당 프로퍼티가 없으면 자바스크립트는 자동으로 프로토타입에서 프로퍼티를 찾기 때문이라고 합니다. [link](https://ko.javascript.info/prototype-inheritance)자세한 사항은 다음에..
 /*class User {
 
