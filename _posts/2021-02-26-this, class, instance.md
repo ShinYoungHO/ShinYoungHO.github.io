@@ -70,6 +70,7 @@ foo.innerFoo()//'아직 쉽습니다.'
 * 실행시 온점 왼쪽 (foo) 가 부모객체입니다.
 
 ```js
+///화살표함수와 this 1
 var foo = {
     foo : 'foo',
     innerFoo:()=>{
@@ -82,6 +83,36 @@ foo.innerFoo()//{foo: "foo", innerFoo: ƒ}
 
 * 화살표 함수이긴 하지만 var로 인해 window객체에 foo가 선언되어 this가 작동합니다.
 * let으로 foo를 선언하면 undefined가 출력됩니다.
+
+```js
+///화살표함수와 this 2
+/// case 1
+let foo = {
+    foo : 'foo',
+    functionFoo(){
+        const innerFoo = () => {
+            console.log(this.foo);
+       };
+      innerFoo();
+    }
+}
+
+foo.functionFoo()//'foo'
+
+///case 2
+let foo = {
+    foo : 'foo',
+    innerFoo:()=>{
+         console.log(this.foo);
+    }
+}
+
+foo.innerFoo()//undefined
+
+```
+* 화살표함수는 this 를 바인딩하지 않습니다.[바인딩 정리](https://medium.com/sjk5766/javascript-this-binding-%EC%A0%95%EB%A6%AC-ae84e2499962)
+
+
 
 ```js
 
@@ -101,6 +132,7 @@ false
 
 
 ```js
+///화살표함수와 this 3
 let foo = {
     foo : 'foo',
     innerFoo:()=>{
