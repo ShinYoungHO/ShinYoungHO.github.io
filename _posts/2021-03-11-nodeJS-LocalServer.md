@@ -108,7 +108,7 @@ app.listen(3000,()=>{
 
 ## partial HTML
 
-![img](/assets/images/localServer/partial.jpg) 
+![img](/assets/images/localServer/partial.png) 
 
 * 항상 사용되는 HTML header오 footer를 따로 저장해두고 불러와서 사용할 수 있다. header, footer 등.
 * help page를 예시로 들면 
@@ -141,4 +141,4 @@ app.get('/help',(req,res)=>{
 
 ### output
 
-![img](/assets/images/localServer/help.jpg) 
+![img](/assets/images/localServer/help.png) 
